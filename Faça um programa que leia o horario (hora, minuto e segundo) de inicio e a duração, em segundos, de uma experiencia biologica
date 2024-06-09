@@ -1,0 +1,17 @@
+# 49 - Faça um programa que leia o horario (hora, minuto e segundo) de inicio e a duração, em segundos, de uma experiencia
+# biologica. o programa deve resultar com o novo horario (hora, minuto e segundo) do termino da mesma.
+
+print('Informe o horario de inicio de experiencia: ')
+hora_inicio = int(input('hora: '))
+minuto_inicio = int(input('minuto: '))
+segundo_inicio = int(input('segundo: '))
+
+duracao = int(input('Informe a duração em segundos da experiencia: '))
+
+segundos_inicio = hora_inicio * 3600 + minuto_inicio * 60 + segundo_inicio
+segundos_fim = segundos_inicio + duracao
+hora_fim = segundos_fim // 3600 % 24
+minuto_fim = segundos_fim % 3600 // 60
+segundo_fim = segundos_fim % 60
+
+print('O horario de término da experiencia é: {:02d}:{:02d}:{:02d}'.format(hora_fim, minuto_fim, segundo_fim))
